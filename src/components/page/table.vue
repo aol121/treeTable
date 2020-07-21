@@ -9,7 +9,7 @@
 <script>
   import treeTable from '../common/treeTable.vue';
   export default {
-    name: 'dashboard',
+    name: 'table',
     data() {
       return {
         result: [],
@@ -59,7 +59,7 @@
       //遍历数据
       this.data.forEach((v) => {
         //递归转化数据
-        this.diguiFn(v, this.result)
+        this.recursionFn(v, this.result)
       })
     },
     mounted() {
@@ -71,7 +71,7 @@
     },
 
     methods: {
-      diguiFn(data, arr) {
+      recursionFn(data, arr) {
         //如果不存在
         if (!arr.find((w, j) => {
             return w.name && w.name === data[0]
@@ -82,7 +82,7 @@
           }
           //如果data.slice(1)中还有元素则一直递归下去
           if (data.slice(1).length) {
-            this.diguiFn(data.slice(1), obj.children)
+            this.recursionFn(data.slice(1), obj.children)
           }
           // 遍历完毕整体填充至arr中
           arr.push(obj)
@@ -91,7 +91,7 @@
             return w.name === data[0]
           })
           if (data.slice(1).length) {
-            this.diguiFn(data.slice(1), arr[index].children)
+            this.recursionFn(data.slice(1), arr[index].children)
           }
         }
       }

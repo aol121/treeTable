@@ -1,6 +1,6 @@
 {
-  "name": "vue-manage-system",
-  "version": "4.2.0",
+  "name": "vue-treeTable",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "npm run serve",
