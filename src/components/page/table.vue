@@ -9,7 +9,7 @@
 <script>
   import treeTable from '../common/treeTable.vue';
   export default {
-    name: 'table',
+    name: 'table-box',
     data() {
       return {
         result: [],
