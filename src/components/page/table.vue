@@ -43,7 +43,7 @@
       treeTable
     },
     computed: {
-      headerList(){
+      headerList() {
         return [...this.typeList, ...this.valueType];
       },
       tableBoxWidthComputed() {
@@ -89,8 +89,8 @@
             this.recursionFn(data.slice(1), arr[index].children);
           }
         }
-      }
-    }
+      },
+    },
   };
 </script>
 

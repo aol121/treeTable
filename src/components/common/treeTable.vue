@@ -50,7 +50,7 @@
 
   .tree-table > div > div:first-child {
     /* 显示文字的dom元素 */
-    padding:5px 8px;
+    padding: 5px 8px;
     box-sizing: border-box;
     white-space: nowrap;
     overflow: hidden;
