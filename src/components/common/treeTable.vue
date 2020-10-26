@@ -1,7 +1,7 @@
 <template>
   <div class="tree-table">
     <div v-for="item in treeData" :key="item.name">
-      <div :style="{ width:wrapWidth + 'px' }">{{item.name}}</div>
+      <div :style="{ width: wrapWidth + 'px' }">{{item.name}}</div>
       <template v-if="item.children && item.children.length">
         <tree-table :tree-data="item.children" :wrapWidth="wrapWidth" />
       </template>
@@ -12,16 +12,25 @@
 <script>
   export default {
     name: 'tree-table',
-    data() {
-      return {};
-    },
     props: {
-      //其容器元素的尺寸/列数=每列宽度
+      // 其容器元素的尺寸/列数=每列宽度
       wrapWidth: {
         default: 0,
       },
       treeData: {
-        default: () => [],
+        default: () => [
+          // {
+          //   name: 'jobs',
+          //   children: [
+          //     {
+          //       name: '2018',
+          //       children: [
+
+          //       ]
+          //     },
+          //   ]
+          // }
+        ],
       }
     },
   }
